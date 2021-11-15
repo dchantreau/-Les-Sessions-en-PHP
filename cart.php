@@ -8,8 +8,10 @@ if(!isset($_SESSION["loginname"])){
 <section class="cookies container-fluid">
     <div class="row">
         <?php
-        foreach(array_unique($_SESSION['panier']) as $cookie_id) {
-            echo "<div>".$catalog['$cookie_id']['name']." </div>";
+            
+            var_dump($_SESSION['panier']);
+            foreach(array_unique($_SESSION ['panier']) as $cookie_id) {
+            echo "<div>".$catalog[$cookie_id]['name']." </div>";
         }
         ?>
    

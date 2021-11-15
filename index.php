@@ -2,13 +2,12 @@
 <?php require 'inc/head.php'; ?>
 <?php
 
-    // $_SESSION['panier'] = [];
     if(isset($_GET['add_to_cart'])){
         if (!isset($_SESSION['panier'])){
             $_SESSION['panier'] = [];
         }
 
-        $_SESSION['panier'][] = [$_GET['add_to_cart']];
+        $_SESSION['panier'][] = $_GET['add_to_cart'];
         echo'<pre>';
         var_dump($_SESSION['panier']);
         echo'</pre>';
